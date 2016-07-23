@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_javaapplication5" default="compile.module.javaapplication5">
+  <dirname property="module.javaapplication5.basedir" file="${ant.file.module_javaapplication5}"/>
+  
+  <property name="module.jdk.home.javaapplication5" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.javaapplication5" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.javaapplication5" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.javaapplication5" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="javaapplication5.output.dir" value="${module.javaapplication5.basedir}/out/production/JavaApplication5"/>
+  <property name="javaapplication5.testoutput.dir" value="${module.javaapplication5.basedir}/out/test/JavaApplication5"/>
+  
+  <path id="javaapplication5.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="javaapplication5.module.production.classpath">
+    <path refid="${module.jdk.classpath.javaapplication5}"/>
+    <path refid="library.bcprov-ext-jdk15on-154.classpath"/>
+    <path refid="library.jai_codec.classpath"/>
+    <path refid="library.jai_core.classpath"/>
+    <path refid="library.steganography-2.0.0.classpath"/>
+    <path refid="library.jfoenix.classpath"/>
+  </path>
+  
+  <path id="javaapplication5.runtime.production.module.classpath">
+    <pathelement location="${javaapplication5.output.dir}"/>
+    <path refid="library.bcprov-ext-jdk15on-154.classpath"/>
+    <path refid="library.jai_codec.classpath"/>
+    <path refid="library.jai_core.classpath"/>
+    <path refid="library.steganography-2.0.0.classpath"/>
+    <path refid="library.jfoenix.classpath"/>
+  </path>
+  
+  <path id="javaapplication5.module.classpath">
+    <path refid="${module.jdk.classpath.javaapplication5}"/>
+    <pathelement location="${javaapplication5.output.dir}"/>
+    <path refid="library.bcprov-ext-jdk15on-154.classpath"/>
+    <path refid="library.jai_codec.classpath"/>
+    <path refid="library.jai_core.classpath"/>
+    <path refid="library.steganography-2.0.0.classpath"/>
+    <path refid="library.jfoenix.classpath"/>
+  </path>
+  
+  <path id="javaapplication5.runtime.module.classpath">
+    <pathelement location="${javaapplication5.testoutput.dir}"/>
+    <pathelement location="${javaapplication5.output.dir}"/>
+    <path refid="library.bcprov-ext-jdk15on-154.classpath"/>
+    <path refid="library.jai_codec.classpath"/>
+    <path refid="library.jai_core.classpath"/>
+    <path refid="library.steganography-2.0.0.classpath"/>
+    <path refid="library.jfoenix.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.javaapplication5">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.javaapplication5">
+    <patternset refid="excluded.from.module.javaapplication5"/>
+  </patternset>
+  
+  <path id="javaapplication5.module.sourcepath">
+    <dirset dir="${module.javaapplication5.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.javaapplication5" depends="compile.module.javaapplication5.production,compile.module.javaapplication5.tests" description="Compile module JavaApplication5"/>
+  
+  <target name="compile.module.javaapplication5.production" depends="register.custom.compilers" description="Compile module JavaApplication5; production classes">
+    <mkdir dir="${javaapplication5.output.dir}"/>
+    <javac2 destdir="${javaapplication5.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.javaapplication5}/javac">
+      <compilerarg line="${compiler.args.javaapplication5}"/>
+      <bootclasspath refid="javaapplication5.module.bootclasspath"/>
+      <classpath refid="javaapplication5.module.production.classpath"/>
+      <src refid="javaapplication5.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.javaapplication5"/>
+    </javac2>
+    
+    <copy todir="${javaapplication5.output.dir}">
+      <fileset dir="${module.javaapplication5.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.javaapplication5.tests" depends="register.custom.compilers,compile.module.javaapplication5.production" description="compile module JavaApplication5; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.javaapplication5" description="cleanup module">
+    <delete dir="${javaapplication5.output.dir}"/>
+    <delete dir="${javaapplication5.testoutput.dir}"/>
+  </target>
+</project>

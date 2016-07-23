@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+X-COMMENT: Main-Class will be added automatically by build
+Class-Path: libs/bcprov-ext-jdk15on-154 libs/jai_codec libs/jai_core l
+ ibs/jfoenix libs/steganography-2.0.0
+Main-Class: App.Main
+

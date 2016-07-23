@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="anchordecrypt" prefHeight="480.0" prefWidth="420.0" style="-fx-background-color: white;" stylesheets="@/Resources/StyleSheet/EncryptDisplay.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Resources.GUI.EncryptDisplay">
+   <children>
+      <JFXSlider fx:id="slider" indicatorPosition="RIGHT" layoutX="63.0" layoutY="150.0" min="1.0" prefHeight="14.0" prefWidth="297.0" style=".thumb: red;" value="1.0" AnchorPane.leftAnchor="63.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="100.0" />
+      <JFXButton fx:id="imagefile" buttonType="RAISED" layoutX="63.0" layoutY="260.0" onAction="#imageAction" prefHeight="41.0" prefWidth="297.0" ripplerFill="WHITE" style="-fx-background-color: #2196F3;" text="Image" textFill="WHITE" AnchorPane.leftAnchor="63.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="290.0" />
+      <JFXPasswordField fx:id="password" focusColor="#2196f3" labelFloat="true" layoutX="63.0" layoutY="240.0" maxWidth="330.0" minWidth="260.0" prefHeight="43.0" prefWidth="297.0" promptText="Password" unFocusColor="#909090" AnchorPane.leftAnchor="63.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="180.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXPasswordField>
+      <Label layoutX="71.0" layoutY="451.0" text="SSI #1 - Secure Bitcoin address storage.@BitNyeFe - Wisdom Oparaocha " textFill="#05050566" AnchorPane.bottomAnchor="14.0">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="10.0" layoutY="15.0" prefHeight="43.0" prefWidth="420.0" style="-fx-background-color: #2196F3;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXHamburger fx:id="hamburger" layoutX="19.0" layoutY="21.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+            <Label layoutX="65.0" layoutY="8.0" prefHeight="27.0" prefWidth="297.0" text="New ฿itcoin Address" textFill="WHITE" AnchorPane.leftAnchor="67.0">
+               <font>
+                  <Font name="Arial Nova Light" size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Text fx:id="warning" fill="#f4433680" fontSmoothingType="LCD" layoutX="63.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't convert, crop or manipulate your image wallet in any way." textAlignment="CENTER" visible="false" wrappingWidth="297.0">
+         <font>
+            <Font name="Arial Nova Cond Light" size="20.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

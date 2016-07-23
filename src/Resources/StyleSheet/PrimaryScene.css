@@ -1,0 +1,17 @@
+#slider .thumb{
+-fx-background-color: #2196F3;
+
+}
+#hamburger{
+-fx-cursor: hand;
+}
+#hamburger StackPane{
+	-fx-background-color:white;
+}
+
+
+#listview StackPane{
+
+-fx-cursor: hand;
+
+}
