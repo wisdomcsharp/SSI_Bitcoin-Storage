@@ -5,6 +5,9 @@
 ## More Information
 You can read more about this specification at [SSI - speicifications](https://bitcointalk.org/index.php?topic=1558778.msg15648299)
 
+## Current version
+> * 0.1 
+> * Please wait for version 0.5 and above if you require stable & production use, which has been reviewed.
 
 ## Running
 To run this application, please download the latest release which is available [here](https://github.com/wisdomcsharp/SSI---Bitcoin-Storage/tree/master/latest%20release) make sure you have [Java](https://java.com) installed
