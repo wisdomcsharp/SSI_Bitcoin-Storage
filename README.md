@@ -3,7 +3,7 @@
 
 
 ## More Information
-You can read more about this specification at [SSI - speicifications](https://bitcointalk.org/index.php?topic=1558778.msg15648299)
+You can read more about this specification at [SSI - Bitcoin Storage](https://bitcointalk.org/index.php?topic=1562481.0)
 
 ## Current version
 > * 0.1 
